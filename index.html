@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Визитка</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet" type="text/css"> 
+</head>
+<body>
+<button class="tablink" onclick="openPage('Home', this, '#DB7093')">Биография</button>
+<button class="tablink" onclick="openPage('News', this, '#DB7093')" id="defaultOpen">Контакты</button>
+<button class="tablink" onclick="openPage('Contact', this, '#FF00FF')">Опыт работы</button>
+<button class="tablink" onclick="openPage('About', this, '#9932CC')">Будущее</button>
+
+<div id="Home" class="tabcontent">
+  <h1 class="text">О себе:</h1>
+  <h2 class="text">Меня зовут Анна, мне 19 лет, живу в Москве,<br> учусь в Московском Государственном Университете<br> на втором курсе факультета филологии.<br>С отличием закончила музыкальную школу, имею множество наград<br> за участие в конкурсах. Увлекаюсь чтением литературы,<br> графическим дизайном, в свободное время пишу статьи.<br> Работодатели ценят меня за трудолюбие, ответственность<br> и быструю адаптацию к условиям работы.</h2>
+</div>
+
+<div id="News" class="tabcontent">
+  <h1 class="text">Контакты, где вы сможете со мной связаться ;)</h1>
+  <button class="button"><span><a href="https://vk.com/annnnnnnnnnnnnnnnnya">Вконтакте</a></span></button>
+  <img class="vk" src="img/vk.jpg">
+  <button class="button"><span><a href="https://web.telegram.org/a/#2084125535">Телеграмм</a></span></button>
+  <img class="vk" src="img/tg.jpg">
+  <h2 class="text"><p>номер телефона: 8(925)-915-71-88</p></h2> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h1 class="text">Опыт работы:</h1>
+  <h2 class="text">Опыт работы в сфере образования:<br> готовлю 11-классников к сдаче ЕГЭ в качестве<br> репетитора и куратора в онлайн-школе.<button class="button2"><span><a href="https://vk.com/rusgramschoolpublic">Школа</a></span></button><br>
+Оказываю услуги графического дизайна на фрилансе <br> имею небольшую базу постоянных клиентов.
+Большой опыт<br> в сфере обслуживания – на протяжении шести лет работала в кафе. </h2>
+</div>
+
+<div id="About" class="tabcontent">
+  <h1 class="text">Планы на будущее:</h1>
+  <h2 class="text">Улучшить навыки графического дизайна,<br> расширить базу клиентов.
+Набраться опыта<br> в сфере образования, стать экспертом ЕГЭ.<br>
+Пройти курсы SMM-менеджмента, совместить<br> с графическим дизайном, чтобы открыть больше<br> возможностей для развития.</h2>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+
+</script>
+   
+</body>
+
+</html> 
